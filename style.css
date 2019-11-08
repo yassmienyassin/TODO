@@ -1,0 +1,157 @@
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+body{
+  background: url("articles.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* style the ul  */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-bottom: 1.3rem;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 18px;
+  background: #eee;
+  font-size: 18px;
+  border-radius: 23px;
+  margin: .7rem .8rem;
+  color: #1b1a25;
+  transition: all .5s ease-in-out;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #5259e752;
+}
+
+
+ul li:hover {
+  background: #ddd;
+}
+
+
+
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #514ddf;
+    color: white;
+    border-radius: 14px;
+    transition: all .2s ease-in-out;
+}
+
+/* Style the todo list */
+.todo {
+  width: 41%;
+  margin: 9.4rem auto;
+  background: #fff;
+  border: 1px solid #1010c3;
+  border-radius: 15px;
+  
+}
+
+/* Clear floats after the todo */
+.add:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* style add */
+.add {
+  padding: .5rem 1.2rem;
+    color: #514fe1d1;
+    text-align: center;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  
+  border-radius: 24px;
+  width: 75%;
+  color: #181721;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  border: 1px solid #5055e4;
+}
+
+/* Style the "AddList" button */
+  .addList {
+    padding: 12px;
+    width: 23%;
+    background: #706fe6;
+    color: #f8f8f8;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border-radius: 24PX;
+    margin-left: .5rem;
+  }
+
+
+  .addList:hover {
+    background-color: #fff;
+    color: #5253e3;;
+    border: 1px solid #5253e3;
+}
+/* Responsive style */
+    @media only screen and (max-width: 1200px){
+      .todo{
+        width: 50%;
+      }
+    }
+    @media only screen and (max-width: 1023px){
+      .todo{
+        width: 68%;
+      }
+      .addList {
+        padding: 10px 4px;
+      }
+    }
+    @media only screen and (max-width: 768px){
+      .addList{
+        margin-left: .3rem;
+        padding: 8px 4px;
+      }
+    }
+    @media only screen and (max-width: 480px){
+      .todo{
+        width: 96%;
+      }
+      .addList {
+        padding: 10px 4px;
+        width: 23%;
+        
+        
+        font-size: 14px;
+      
+        margin-left: .3rem;
+    }
+}
